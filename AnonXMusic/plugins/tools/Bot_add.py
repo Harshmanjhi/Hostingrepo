@@ -34,7 +34,8 @@ async def join_watcher(_, message):
                     f"**🍂𝐂ʜᴀᴛ 𝐈ᴅ:** {message.chat.id}"
                    
                 )
-                await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg
+                await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg , reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton(f"ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴏ", url=f"http://t.me/cutiepiexBot?startgroup=new")]
              ]))
                 await userbot.join_chat(f"{username}")
     except Exception as e:
