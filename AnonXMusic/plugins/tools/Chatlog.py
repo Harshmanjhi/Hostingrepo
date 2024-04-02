@@ -24,7 +24,7 @@ async def join_watcher(_, message):
                 f"๏ ɢʀᴏᴜᴘ ɪᴅ ➠ {message.chat.id}\n"                
             )
             await app.send_message(LOG_GROUP_ID, caption=msg, reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(f"ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴏ", url=f"http://t.me/Dark_waifu_Bot?startgroup=new")]
+            [InlineKeyboardButton(f"ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴏ", url=f"http://t.me/cutiepiexbot?startgroup=new")]
          ]))
             
 @app.on_message(filters.left_chat_member)
