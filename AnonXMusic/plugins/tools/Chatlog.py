@@ -21,10 +21,12 @@ async def join_watcher(_, message):
                 f"❀ ʙᴏᴛ ᴀᴅᴅᴇᴅ ɪɴ ᴀ #ɴᴇᴡ_ɢʀᴏᴜᴘ ❀\n\n"
                
                 f"๏ ɢʀᴏᴜᴘ ɴᴀᴍᴇ ➠ {message.chat.title}\n"
-                f"๏ ɢʀᴏᴜᴘ ɪᴅ ➠ {message.chat.id}\n"               
+                f"๏ ɢʀᴏᴜᴘ ɪᴅ ➠ {message.chat.id}\n"                
             )
-            await app.send_message(LOG_GROUP_ID, msg) 
-
+            await app.send_message(LOG_GROUP_ID, caption=msg, reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton(f"ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴏ", url=f"http://t.me/Dark_waifu_Bot?startgroup=new")]
+         ]))
+            
 @app.on_message(filters.left_chat_member)
 async def on_left_chat_member(_, message: Message):
     if (await app.get_me()).id == message.left_chat_member.id:
