@@ -4,10 +4,9 @@ from pyrogram.types import Message
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, InputMediaVideo, Message
 from config import LOGGER_ID as LOG_GROUP_ID
-from VIPMUSIC import app  
-from VIPMUSIC.core.userbot import Userbot
-from VIPMUSIC.utils.database import delete_served_chat
-from VIPMUSIC.utils.database import get_assistant
+from AnonXMusic import app  
+from AnonXMusic.core.userbot import Userbot
+from AnonXMusic.utils.database import get_assistant
 
 
 photo = [
