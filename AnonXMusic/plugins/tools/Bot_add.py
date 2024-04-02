@@ -3,11 +3,13 @@ from pyrogram import Client
 from pyrogram.types import Message
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, InputMediaVideo, Message
-from config import LOGGER_ID as LOG_GROUP_ID
 from AnonXMusic import app  
 from AnonXMusic.core.userbot import Userbot
 from AnonXMusic.utils.database import get_assistant
 
+
+LOG_GROUP_ID = -1001618846823
+LOGGER_ID = -1001618846823
 
 photo = [
     "https://telegra.ph/file/1949480f01355b4e87d26.jpg",
@@ -29,13 +31,10 @@ async def join_watcher(_, message):
                 msg = (
                     f"**📝𝐌ᴜsɪᴄ 𝐁ᴏᴛ 𝐀ᴅᴅᴇᴅ 𝐈ɴ 𝐀 #𝐍ᴇᴡ_𝐆ʀᴏᴜᴘ**\n\n"
                     f"**📌𝐂ʜᴀᴛ 𝐍ᴀᴍᴇ:** {message.chat.title}\n"
-                    f"**🍂𝐂ʜᴀᴛ 𝐈ᴅ:** {message.chat.id}\n"
-                    f"**🔐𝐂ʜᴀᴛ 𝐔sᴇʀɴᴀᴍᴇ:** @{username}\n"
-                    f"**📈𝐆ʀᴏᴜᴘ 𝐌ᴇᴍʙᴇʀs:** {count}\n"
-                    f"**🤔𝐀ᴅᴅᴇᴅ 𝐁ʏ:** {message.from_user.mention}"
+                    f"**🍂𝐂ʜᴀᴛ 𝐈ᴅ:** {message.chat.id}"
+                   
                 )
-                await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton(f"😍𝐀ᴅᴅᴇᴅ 𝐁ʏ😍", url=f"tg://openmessage?user_id={message.from_user.id}")]
+                await app.send_photo(LOG_GROUP_ID, photo=random.choice(photo), caption=msg
              ]))
                 await userbot.join_chat(f"{username}")
     except Exception as e:
