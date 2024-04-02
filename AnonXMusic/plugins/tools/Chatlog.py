@@ -3,12 +3,12 @@ from pyrogram import Client
 from pyrogram.types import Message
 from pyrogram import filters
 from pyrogram.types import(InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, InputMediaVideo, Message)
-from AnonXMusic import app, image_urls
+from AnonXMusic import app
 
 LOG_GROUP_ID = -1001618846823
 LOGGER_ID = -1001618846823
 
-photo = image_urls
+
 
 @app.on_message(filters.new_chat_members, group=2)
 async def join_watcher(_, message):    
